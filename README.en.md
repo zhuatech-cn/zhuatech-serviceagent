@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: Business-hours SLA deadlines
+
+Deadlines advance only within configured weekday office hours and skip supplied holidays. Times are organization-local and must be whole minutes; no timezone or overnight-shift inference is performed. Available to signed-in users with editable inputs, explicit validation and JSON export. See [API, examples and limitations](docs/AI_BUSINESS_UPGRADE_20261023.md). No external model calls or automatic business changes. Existing license and contact details are retained.
+
 # ZhuaTech ServiceAgent
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise AI-assisted workflows with human governance.
