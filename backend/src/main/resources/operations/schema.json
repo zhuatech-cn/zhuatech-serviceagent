@@ -1,0 +1,93 @@
+{
+  "slug": "serviceagent",
+  "title": "服务积压净消化与班次负荷",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "backlog",
+      "label": "班前积压件数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "incoming",
+      "label": "本班预计新增件",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "minutesPerCase",
+      "label": "单件处理分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "agents",
+      "label": "可用坐席数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "minutesPerAgent",
+      "label": "每坐席有效分钟",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "reservedPct",
+      "label": "预留容量%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "caseCapacity",
+      "label": "本班完整件容量"
+    },
+    {
+      "key": "expectedClosingBacklog",
+      "label": "预计期末积压"
+    },
+    {
+      "key": "netClearance",
+      "label": "净消化容量"
+    }
+  ],
+  "description": "按已积压、预计新流入和可用坐席分钟计算本班处理容量及期末积压；区分理论清理与持续新增流量。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "backlog": "100",
+        "incoming": "80",
+        "minutesPerCase": "10",
+        "agents": "5",
+        "minutesPerAgent": "300",
+        "reservedPct": "10"
+      }
+    ]
+  }
+}

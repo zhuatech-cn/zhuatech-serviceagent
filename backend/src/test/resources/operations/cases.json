@@ -1,0 +1,66 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "agents": "2"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "agents": "7"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "reservedPct": "100"
+    },
+    "expected": {
+      "caseCapacity": "#0",
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "minutesPerCase": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "backlog": "0",
+      "incoming": "0",
+      "agents": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "minutesPerAgent": "301"
+    },
+    "expected": {
+      "caseCapacity": "#135"
+    },
+    "error": false
+  }
+]
