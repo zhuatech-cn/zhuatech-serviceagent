@@ -1,0 +1,89 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    }
+  },
+  {
+    "patch": {
+      "agents": "2"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    }
+  },
+  {
+    "patch": {
+      "agents": "7"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    }
+  },
+  {
+    "patch": {
+      "reservedPct": "100"
+    },
+    "expected": {
+      "caseCapacity": "#0",
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    }
+  },
+  {
+    "patch": {
+      "backlog": "0",
+      "incoming": "0",
+      "agents": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    }
+  },
+  {
+    "patch": {
+      "minutesPerAgent": "301"
+    },
+    "expected": {
+      "caseCapacity": "#135"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "caseCapacity": "#135",
+      "expectedClosingBacklog": "#45"
+    }
+  }
+]
